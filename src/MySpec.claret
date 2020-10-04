@@ -1,22 +1,67 @@
-/*
- * This is an example claret specification
- */
-systemName "SYSTEM_NAME"
+systemName "metro_de_londres"
 
-usecase "Your First Use Case" {
-	version "0.1" type "set_type" user "set_user" date "set_date"
-	actor person "system actor"
+// Explicitando tamanho do relatório de casos de testes
+maxTestCaseSize 1
+
+usecase "Calcular Trajetos Entre Estações" {
+	version "0.1" type "set_type" user "set_user" date "04/10/20"
+	actor usuario "Usuario"
 	
-	preCondition "first_condition", "second_condition"
+	preCondition "O sistema está operacional, exibindo o menu principal"
 	
 	basic {
-		step 1 person "does something"
-		step 2 system "responds to actor"
+		step 1  usuario "digita 1 e aperta Enter" af [1] 
+		step 2 system "apresenta prompt para inserir Estação de Origem" ef[1]
+		 
+		step 3 usuario "digita o nome da Estação de Origem e aperta Enter" af [1]
+		step 4 system "apresenta prompt para inserir Estação de Destino" ef[2]
+		
+		step 5 usuario "digita o nome da Estação de Destino e aperta Enter" af [1]
+		step 6 system "apresenta prompt para selecionar a quantidade de trajetos" ef[3]
+		
+		step 7 usuario "digita a quantidade de trajetos e aperta Enter" af [1]
+		step 8 system "apresenta prompt para operação de exclusão de linha" ef[4]
+		
+		step 9 usuario "digita N (não excluir linha) e aperta Enter" af [1,2]
+		step 10 system "apresenta a quantidade de trajetos selecionada e o menu principal" ef[6]
 	}
 	
-	// Alternatives scenarios here...
+	alternative 1 "Cancelar Operação" {
+		step 1 usuario "aperta ESC para cancelamento"
+		step 2 system "apresenta menu principal"
+	}
 	
-	// Exceptions scenarios here...
+	alternative 2 "Excluir Linha" {
+		step 1 usuario "usuário digita Y e aperta Enter"
+		step 2 system "apresenta prompt para selecionar linha para exclusão" ef[6]
+		step 3 usuario "usuário digita nome da linha para exclusão e aperta Enter" 
+		step 4 system "remove linha digitada dos trajetos calculados, apresenta trajetos e menu principal" ef[5] 
+	}
 	
-	postCondition "final condition", "other condition"
+	
+	exception 1 "Opção não reconhecida no Menu"{
+		step 1 system "indica opção desconhecida" bs 1 
+	}
+	
+	exception 2 "Estação de Origem não existe"{
+		step 1 system "indica estação desconhecida" bs 2 
+	}
+	
+	exception 3 "Estação de Destino não existe"{
+		step 1 system "indica estação desconhecida" bs 4 
+	}
+	
+	exception 4 "Quantidade de trajetos inválida"{
+		step 1 system "indica quantidade inválida de trajetos" bs 6 
+	}
+	
+	exception 5 "Linha não reconhecida"{
+		step 1 system "indica linha reconhecida" bs 8
+	}
+	
+	exception 6 "Opção de operação de linha não reconhecida"{
+		step 1 system "indica operação não reconhecida" bs 9
+	}
+		
+	postCondition "O sistema está disponível para nova requisição"
 }

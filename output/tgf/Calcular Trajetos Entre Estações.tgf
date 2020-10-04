@@ -1,0 +1,55 @@
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+8 8
+9 9
+10 10
+11 11
+12 12
+13 13
+14 14
+15 15
+16 16
+17 17
+18 18
+19 19
+20 20
+21 21
+#
+1 2 [c] O sistema está operacional, exibindo o menu principal
+2 3 [s] Usuario digita 1 e aperta Enter
+3 4 [e] system apresenta prompt para inserir Estação de Origem
+4 5 [s] Usuario digita o nome da Estação de Origem e aperta Enter
+5 6 [e] system apresenta prompt para inserir Estação de Destino
+6 7 [s] Usuario digita o nome da Estação de Destino e aperta Enter
+7 8 [e] system apresenta prompt para selecionar a quantidade de trajetos
+8 9 [s] Usuario digita a quantidade de trajetos e aperta Enter
+9 10 [e] system apresenta prompt para operação de exclusão de linha
+10 11 [s] Usuario digita N (não excluir linha) e aperta Enter
+11 12 [e] system apresenta a quantidade de trajetos selecionada e o menu principal
+12 13 [c] O sistema está disponível para nova requisição
+2 14 [s] Usuario aperta ESC para cancelamento
+14 13 [e] system apresenta menu principal
+3 2 [e] system indica opção desconhecida
+4 15 [s] Usuario aperta ESC para cancelamento
+15 13 [e] system apresenta menu principal
+5 3 [e] system indica estação desconhecida
+6 16 [s] Usuario aperta ESC para cancelamento
+16 13 [e] system apresenta menu principal
+7 5 [e] system indica estação desconhecida
+8 17 [s] Usuario aperta ESC para cancelamento
+17 13 [e] system apresenta menu principal
+9 7 [e] system indica quantidade inválida de trajetos
+10 18 [s] Usuario aperta ESC para cancelamento
+18 13 [e] system apresenta menu principal
+10 19 [s] Usuario usuário digita Y e aperta Enter
+19 20 [e] system apresenta prompt para selecionar linha para exclusão
+20 21 [s] Usuario usuário digita nome da linha para exclusão e aperta Enter
+21 13 [e] system remove linha digitada dos trajetos calculados, apresenta trajetos e menu principal
+11 10 [e] system indica operação não reconhecida
+19 13 [e] system indica operação não reconhecida
+21 13 [e] system indica linha reconhecida

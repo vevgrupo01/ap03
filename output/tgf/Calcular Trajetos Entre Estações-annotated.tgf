@@ -1,0 +1,121 @@
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+8 8
+9 9
+10 10
+11 11
+12 12
+13 13
+14 14
+15 15
+16 16
+17 17
+18 18
+19 19
+20 20
+21 21
+22 22
+23 23
+24 24
+25 25
+26 26
+27 27
+28 28
+29 29
+30 30
+31 31
+32 32
+33 33
+34 34
+35 35
+36 36
+37 37
+38 38
+39 39
+40 40
+41 41
+42 42
+43 43
+44 44
+45 45
+46 46
+47 47
+48 48
+49 49
+50 50
+51 51
+52 52
+53 53
+54 54
+#
+1 22 conditions
+22 2 O sistema está operacional, exibindo o menu principal
+2 23 steps
+23 3 Usuario digita 1 e aperta Enter
+3 24 expected_results
+24 4 system apresenta prompt para inserir Estação de Origem
+4 25 steps
+25 5 Usuario digita o nome da Estação de Origem e aperta Enter
+5 26 expected_results
+26 6 system apresenta prompt para inserir Estação de Destino
+6 27 steps
+27 7 Usuario digita o nome da Estação de Destino e aperta Enter
+7 28 expected_results
+28 8 system apresenta prompt para selecionar a quantidade de trajetos
+8 29 steps
+29 9 Usuario digita a quantidade de trajetos e aperta Enter
+9 30 expected_results
+30 10 system apresenta prompt para operação de exclusão de linha
+10 31 steps
+31 11 Usuario digita N (não excluir linha) e aperta Enter
+11 32 expected_results
+32 12 system apresenta a quantidade de trajetos selecionada e o menu principal
+12 33 conditions
+33 13 O sistema está disponível para nova requisição
+2 34 steps
+34 14 Usuario aperta ESC para cancelamento
+14 35 expected_results
+35 13 system apresenta menu principal
+3 36 expected_results
+36 2 system indica opção desconhecida
+4 37 steps
+37 15 Usuario aperta ESC para cancelamento
+15 38 expected_results
+38 13 system apresenta menu principal
+5 39 expected_results
+39 3 system indica estação desconhecida
+6 40 steps
+40 16 Usuario aperta ESC para cancelamento
+16 41 expected_results
+41 13 system apresenta menu principal
+7 42 expected_results
+42 5 system indica estação desconhecida
+8 43 steps
+43 17 Usuario aperta ESC para cancelamento
+17 44 expected_results
+44 13 system apresenta menu principal
+9 45 expected_results
+45 7 system indica quantidade inválida de trajetos
+10 46 steps
+46 18 Usuario aperta ESC para cancelamento
+18 47 expected_results
+47 13 system apresenta menu principal
+10 48 steps
+48 19 Usuario usuário digita Y e aperta Enter
+19 49 expected_results
+49 20 system apresenta prompt para selecionar linha para exclusão
+20 50 steps
+50 21 Usuario usuário digita nome da linha para exclusão e aperta Enter
+21 51 expected_results
+51 13 system remove linha digitada dos trajetos calculados, apresenta trajetos e menu principal
+11 52 expected_results
+52 10 system indica operação não reconhecida
+19 53 expected_results
+53 13 system indica operação não reconhecida
+21 54 expected_results
+54 13 system indica linha reconhecida
