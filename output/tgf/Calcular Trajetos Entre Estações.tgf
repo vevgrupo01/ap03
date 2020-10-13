@@ -40,21 +40,21 @@
 16 17 [c] O sistema está disponível para uma nova consulta
 4 18 [s] Usuario digita Esc e aperta Enter
 18 17 [e] system cancela a consulta
-5 3 [e] system exibe mensagem de estação de origem inexistente ou inválida
+5 4 [e] system exibe mensagem de estação de origem inexistente ou inválida
 6 19 [s] Usuario digita Esc e aperta Enter
 19 17 [e] system cancela a consulta
-7 5 [e] system exibe mensagem de estação de destino inexistente ou inválida
-7 5 [e] system exibe mensagem alertando que a estação de origem e de destino possuem o mesmo nome
+7 6 [e] system exibe mensagem de estação de destino inexistente ou inválida
+7 6 [e] system exibe mensagem alertando que a estação de origem e de destino possuem o mesmo nome
 8 20 [s] Usuario digita Esc e aperta Enter
 20 17 [e] system cancela a consulta
-9 7 [e] system indica quantidade inválida de trajetos
+9 8 [e] system indica quantidade inválida de trajetos
 10 21 [s] Usuario digita Esc e aperta Enter
 21 17 [e] system cancela a consulta
 10 22 [s] Usuario digita N (não excluir linha) e aperta Enter
 22 17 [e] system apresenta a lista de trajetos de acordo com a quantidade de trajetos e opções definidas, além do menu inicial do sistema
-11 9 [e] system indica opção inválida para opção de exclusão de linha
+11 10 [e] system indica opção inválida para opção de exclusão de linha
 12 23 [s] Usuario digita Esc e aperta Enter
 23 17 [e] system cancela a consulta
-13 11 [e] system indica linha inválida
-13 11 [e] system exibe mensagem alertando que a estação de origem faz parte da linha a ser excluída e não a exclui
-13 11 [e] system exibe mensagem alertando que a estação de destino faz parte da linha a ser excluída e não a exclui
+13 12 [e] system indica linha inválida
+13 14 [e] system exibe mensagem alertando que a estação de origem faz parte da linha a ser excluída e não a exclui
+13 14 [e] system exibe mensagem alertando que a estação de destino faz parte da linha a ser excluída e não a exclui

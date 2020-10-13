@@ -226,7 +226,7 @@ edge
 edge
 [
   source 5
-  target 3
+  target 4
   label "[e] system exibe mensagem de estação de origem inexistente ou inválida"
 ]
 edge
@@ -244,13 +244,13 @@ edge
 edge
 [
   source 7
-  target 5
+  target 6
   label "[e] system exibe mensagem de estação de destino inexistente ou inválida"
 ]
 edge
 [
   source 7
-  target 5
+  target 6
   label "[e] system exibe mensagem alertando que a estação de origem e de destino possuem o mesmo nome"
 ]
 edge
@@ -268,7 +268,7 @@ edge
 edge
 [
   source 9
-  target 7
+  target 8
   label "[e] system indica quantidade inválida de trajetos"
 ]
 edge
@@ -298,7 +298,7 @@ edge
 edge
 [
   source 11
-  target 9
+  target 10
   label "[e] system indica opção inválida para opção de exclusão de linha"
 ]
 edge
@@ -316,19 +316,19 @@ edge
 edge
 [
   source 13
-  target 11
+  target 12
   label "[e] system indica linha inválida"
 ]
 edge
 [
   source 13
-  target 11
+  target 14
   label "[e] system exibe mensagem alertando que a estação de origem faz parte da linha a ser excluída e não a exclui"
 ]
 edge
 [
   source 13
-  target 11
+  target 14
   label "[e] system exibe mensagem alertando que a estação de destino faz parte da linha a ser excluída e não a exclui"
 ]
 ]

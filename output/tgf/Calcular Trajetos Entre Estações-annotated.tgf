@@ -95,21 +95,21 @@
 18 41 expected_results
 41 17 system cancela a consulta
 5 42 expected_results
-42 3 system exibe mensagem de estação de origem inexistente ou inválida
+42 4 system exibe mensagem de estação de origem inexistente ou inválida
 6 43 steps
 43 19 Usuario digita Esc e aperta Enter
 19 44 expected_results
 44 17 system cancela a consulta
 7 45 expected_results
-45 5 system exibe mensagem de estação de destino inexistente ou inválida
+45 6 system exibe mensagem de estação de destino inexistente ou inválida
 7 46 expected_results
-46 5 system exibe mensagem alertando que a estação de origem e de destino possuem o mesmo nome
+46 6 system exibe mensagem alertando que a estação de origem e de destino possuem o mesmo nome
 8 47 steps
 47 20 Usuario digita Esc e aperta Enter
 20 48 expected_results
 48 17 system cancela a consulta
 9 49 expected_results
-49 7 system indica quantidade inválida de trajetos
+49 8 system indica quantidade inválida de trajetos
 10 50 steps
 50 21 Usuario digita Esc e aperta Enter
 21 51 expected_results
@@ -119,14 +119,14 @@
 22 53 expected_results
 53 17 system apresenta a lista de trajetos de acordo com a quantidade de trajetos e opções definidas, além do menu inicial do sistema
 11 54 expected_results
-54 9 system indica opção inválida para opção de exclusão de linha
+54 10 system indica opção inválida para opção de exclusão de linha
 12 55 steps
 55 23 Usuario digita Esc e aperta Enter
 23 56 expected_results
 56 17 system cancela a consulta
 13 57 expected_results
-57 11 system indica linha inválida
+57 12 system indica linha inválida
 13 58 expected_results
-58 11 system exibe mensagem alertando que a estação de origem faz parte da linha a ser excluída e não a exclui
+58 14 system exibe mensagem alertando que a estação de origem faz parte da linha a ser excluída e não a exclui
 13 59 expected_results
-59 11 system exibe mensagem alertando que a estação de destino faz parte da linha a ser excluída e não a exclui
+59 14 system exibe mensagem alertando que a estação de destino faz parte da linha a ser excluída e não a exclui

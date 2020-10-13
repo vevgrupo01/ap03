@@ -4,7 +4,7 @@ systemName "metro_de_londres"
 maxTestCaseSize 1
 
 usecase "Calcular Trajetos Entre Estações" {
-	version "0.2" type "set_type" user "set_user" date "12/10/20"
+	version "0.3" type "set_type" user "set_user" date "13/10/20"
 	actor usuario "Usuario"
 	
 	preCondition "O sistema está operacional e exibindo o menu principal"
@@ -43,35 +43,35 @@ usecase "Calcular Trajetos Entre Estações" {
 	}
 	
 	exception 1 "Estação de Origem inexistente ou inválida " {
-		step 1 system "exibe mensagem de estação de origem inexistente ou inválida" bs 2 
+		step 1 system "exibe mensagem de estação de origem inexistente ou inválida" bs 3 
 	}
 	
 	exception 2 "Estação de Destino inexistente ou inválida" {
-		step 1 system "exibe mensagem de estação de destino inexistente ou inválida" bs 4 
+		step 1 system "exibe mensagem de estação de destino inexistente ou inválida" bs 5 
 	}
 	
 	exception 3 "Estação de Origem e Destino com o mesmo nome" {
-		step 1 system "exibe mensagem alertando que a estação de origem e de destino possuem o mesmo nome" bs 4 
+		step 1 system "exibe mensagem alertando que a estação de origem e de destino possuem o mesmo nome" bs 5 
 	}
 	
 	exception 4 "Quantidade de trajetos inválida" {
-		step 1 system "indica quantidade inválida de trajetos" bs 6 
+		step 1 system "indica quantidade inválida de trajetos" bs 7 
 	}
 
 	exception 5 "Opção inválida para opção de exclusão de linha" {
-		step 1 system "indica opção inválida para opção de exclusão de linha" bs 8
+		step 1 system "indica opção inválida para opção de exclusão de linha" bs 9
 	}
 		
 	exception 6 "Linha inválida" {
-		step 1 system "indica linha inválida" bs 10
+		step 1 system "indica linha inválida" bs 11
 	}
 	
 	exception 7 "Linha cuja estação de origem faz parte" {
-		step 1 system "exibe mensagem alertando que a estação de origem faz parte da linha a ser excluída e não a exclui" bs 10
+		step 1 system "exibe mensagem alertando que a estação de origem faz parte da linha a ser excluída e não a exclui" bs 13
 	}
 	
 	exception 8 "Linha cuja estação de destino faz parte" {
-		step 1 system "exibe mensagem alertando que a estação de destino faz parte da linha a ser excluída e não a exclui" bs 10
+		step 1 system "exibe mensagem alertando que a estação de destino faz parte da linha a ser excluída e não a exclui" bs 13
 	}
 		
 	postCondition "O sistema está disponível para uma nova consulta"
