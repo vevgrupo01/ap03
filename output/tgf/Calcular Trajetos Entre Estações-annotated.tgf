@@ -52,70 +52,81 @@
 52 52
 53 53
 54 54
+55 55
+56 56
+57 57
+58 58
+59 59
 #
-1 22 conditions
-22 2 O sistema est√° operacional, exibindo o menu principal
-2 23 steps
-23 3 Usuario digita 1 e aperta Enter
-3 24 expected_results
-24 4 system apresenta prompt para inserir Esta√ß√£o de Origem
-4 25 steps
-25 5 Usuario digita o nome da Esta√ß√£o de Origem e aperta Enter
-5 26 expected_results
-26 6 system apresenta prompt para inserir Esta√ß√£o de Destino
-6 27 steps
-27 7 Usuario digita o nome da Esta√ß√£o de Destino e aperta Enter
-7 28 expected_results
-28 8 system apresenta prompt para selecionar a quantidade de trajetos
-8 29 steps
-29 9 Usuario digita a quantidade de trajetos e aperta Enter
-9 30 expected_results
-30 10 system apresenta prompt para opera√ß√£o de exclus√£o de linha
-10 31 steps
-31 11 Usuario digita N (n√£o excluir linha) e aperta Enter
-11 32 expected_results
-32 12 system apresenta a quantidade de trajetos selecionada e o menu principal
-12 33 conditions
-33 13 O sistema est√° dispon√≠vel para nova requisi√ß√£o
-2 34 steps
-34 14 Usuario aperta ESC para cancelamento
-14 35 expected_results
-35 13 system apresenta menu principal
-3 36 expected_results
-36 2 system indica op√ß√£o desconhecida
-4 37 steps
-37 15 Usuario aperta ESC para cancelamento
+1 24 conditions
+24 2 O sistema est· operacional e exibindo o menu principal
+2 25 steps
+25 3 Usuario digita 1 e aperta Enter
+3 26 expected_results
+26 4 system apresenta prompt para inserir EstaÁ„o de Origem
+4 27 steps
+27 5 Usuario digita o nome da EstaÁ„o de Origem e aperta Enter
+5 28 expected_results
+28 6 system apresenta prompt para inserir EstaÁ„o de Destino
+6 29 steps
+29 7 Usuario digita o nome da EstaÁ„o de Destino e aperta Enter
+7 30 expected_results
+30 8 system apresenta prompt para selecionar a quantidade de trajetos
+8 31 steps
+31 9 Usuario digita a quantidade de trajetos e aperta Enter
+9 32 expected_results
+32 10 system apresenta prompt para opÁ„o de exclus„o de linha
+10 33 steps
+33 11 Usuario digita S (excluir linha) e aperta Enter
+11 34 expected_results
+34 12 system apresenta prompt para indicar a linha para exclus„o
+12 35 steps
+35 13 Usuario digita o nome da linha para exclus„o e aperta Enter
+13 36 expected_results
+36 14 system remove a linha desejada
+14 37 steps
+37 15 Usuario aguarda o processamento dos trajetos
 15 38 expected_results
-38 13 system apresenta menu principal
-5 39 expected_results
-39 3 system indica esta√ß√£o desconhecida
-6 40 steps
-40 16 Usuario aperta ESC para cancelamento
-16 41 expected_results
-41 13 system apresenta menu principal
-7 42 expected_results
-42 5 system indica esta√ß√£o desconhecida
-8 43 steps
-43 17 Usuario aperta ESC para cancelamento
-17 44 expected_results
-44 13 system apresenta menu principal
-9 45 expected_results
-45 7 system indica quantidade inv√°lida de trajetos
-10 46 steps
-46 18 Usuario aperta ESC para cancelamento
-18 47 expected_results
-47 13 system apresenta menu principal
-10 48 steps
-48 19 Usuario usu√°rio digita Y e aperta Enter
-19 49 expected_results
-49 20 system apresenta prompt para selecionar linha para exclus√£o
-20 50 steps
-50 21 Usuario usu√°rio digita nome da linha para exclus√£o e aperta Enter
+38 16 system apresenta  a lista de trajetos de acordo com a quantidade de trajetos e opÁıes definidas, alÈm do menu inicial do sistema
+16 39 conditions
+39 17 O sistema est· disponÌvel para uma nova consulta
+4 40 steps
+40 18 Usuario digita Esc e aperta Enter
+18 41 expected_results
+41 17 system cancela a consulta
+5 42 expected_results
+42 3 system exibe mensagem de estaÁ„o de origem inexistente ou inv·lida
+6 43 steps
+43 19 Usuario digita Esc e aperta Enter
+19 44 expected_results
+44 17 system cancela a consulta
+7 45 expected_results
+45 5 system exibe mensagem de estaÁ„o de destino inexistente ou inv·lida
+7 46 expected_results
+46 5 system exibe mensagem alertando que a estaÁ„o de origem e de destino possuem o mesmo nome
+8 47 steps
+47 20 Usuario digita Esc e aperta Enter
+20 48 expected_results
+48 17 system cancela a consulta
+9 49 expected_results
+49 7 system indica quantidade inv·lida de trajetos
+10 50 steps
+50 21 Usuario digita Esc e aperta Enter
 21 51 expected_results
-51 13 system remove linha digitada dos trajetos calculados, apresenta trajetos e menu principal
-11 52 expected_results
-52 10 system indica opera√ß√£o n√£o reconhecida
-19 53 expected_results
-53 13 system indica opera√ß√£o n√£o reconhecida
-21 54 expected_results
-54 13 system indica linha reconhecida
+51 17 system cancela a consulta
+10 52 steps
+52 22 Usuario digita N (n„o excluir linha) e aperta Enter
+22 53 expected_results
+53 17 system apresenta a lista de trajetos de acordo com a quantidade de trajetos e opÁıes definidas, alÈm do menu inicial do sistema
+11 54 expected_results
+54 9 system indica opÁ„o inv·lida para opÁ„o de exclus„o de linha
+12 55 steps
+55 23 Usuario digita Esc e aperta Enter
+23 56 expected_results
+56 17 system cancela a consulta
+13 57 expected_results
+57 11 system indica linha inv·lida
+13 58 expected_results
+58 11 system exibe mensagem alertando que a estaÁ„o de origem faz parte da linha a ser excluÌda e n„o a exclui
+13 59 expected_results
+59 11 system exibe mensagem alertando que a estaÁ„o de destino faz parte da linha a ser excluÌda e n„o a exclui

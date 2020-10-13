@@ -19,37 +19,42 @@
 19 19
 20 20
 21 21
+22 22
+23 23
 #
-1 2 [c] O sistema est√° operacional, exibindo o menu principal
+1 2 [c] O sistema est· operacional e exibindo o menu principal
 2 3 [s] Usuario digita 1 e aperta Enter
-3 4 [e] system apresenta prompt para inserir Esta√ß√£o de Origem
-4 5 [s] Usuario digita o nome da Esta√ß√£o de Origem e aperta Enter
-5 6 [e] system apresenta prompt para inserir Esta√ß√£o de Destino
-6 7 [s] Usuario digita o nome da Esta√ß√£o de Destino e aperta Enter
+3 4 [e] system apresenta prompt para inserir EstaÁ„o de Origem
+4 5 [s] Usuario digita o nome da EstaÁ„o de Origem e aperta Enter
+5 6 [e] system apresenta prompt para inserir EstaÁ„o de Destino
+6 7 [s] Usuario digita o nome da EstaÁ„o de Destino e aperta Enter
 7 8 [e] system apresenta prompt para selecionar a quantidade de trajetos
 8 9 [s] Usuario digita a quantidade de trajetos e aperta Enter
-9 10 [e] system apresenta prompt para opera√ß√£o de exclus√£o de linha
-10 11 [s] Usuario digita N (n√£o excluir linha) e aperta Enter
-11 12 [e] system apresenta a quantidade de trajetos selecionada e o menu principal
-12 13 [c] O sistema est√° dispon√≠vel para nova requisi√ß√£o
-2 14 [s] Usuario aperta ESC para cancelamento
-14 13 [e] system apresenta menu principal
-3 2 [e] system indica op√ß√£o desconhecida
-4 15 [s] Usuario aperta ESC para cancelamento
-15 13 [e] system apresenta menu principal
-5 3 [e] system indica esta√ß√£o desconhecida
-6 16 [s] Usuario aperta ESC para cancelamento
-16 13 [e] system apresenta menu principal
-7 5 [e] system indica esta√ß√£o desconhecida
-8 17 [s] Usuario aperta ESC para cancelamento
-17 13 [e] system apresenta menu principal
-9 7 [e] system indica quantidade inv√°lida de trajetos
-10 18 [s] Usuario aperta ESC para cancelamento
-18 13 [e] system apresenta menu principal
-10 19 [s] Usuario usu√°rio digita Y e aperta Enter
-19 20 [e] system apresenta prompt para selecionar linha para exclus√£o
-20 21 [s] Usuario usu√°rio digita nome da linha para exclus√£o e aperta Enter
-21 13 [e] system remove linha digitada dos trajetos calculados, apresenta trajetos e menu principal
-11 10 [e] system indica opera√ß√£o n√£o reconhecida
-19 13 [e] system indica opera√ß√£o n√£o reconhecida
-21 13 [e] system indica linha reconhecida
+9 10 [e] system apresenta prompt para opÁ„o de exclus„o de linha
+10 11 [s] Usuario digita S (excluir linha) e aperta Enter
+11 12 [e] system apresenta prompt para indicar a linha para exclus„o
+12 13 [s] Usuario digita o nome da linha para exclus„o e aperta Enter
+13 14 [e] system remove a linha desejada
+14 15 [s] Usuario aguarda o processamento dos trajetos
+15 16 [e] system apresenta  a lista de trajetos de acordo com a quantidade de trajetos e opÁıes definidas, alÈm do menu inicial do sistema
+16 17 [c] O sistema est· disponÌvel para uma nova consulta
+4 18 [s] Usuario digita Esc e aperta Enter
+18 17 [e] system cancela a consulta
+5 3 [e] system exibe mensagem de estaÁ„o de origem inexistente ou inv·lida
+6 19 [s] Usuario digita Esc e aperta Enter
+19 17 [e] system cancela a consulta
+7 5 [e] system exibe mensagem de estaÁ„o de destino inexistente ou inv·lida
+7 5 [e] system exibe mensagem alertando que a estaÁ„o de origem e de destino possuem o mesmo nome
+8 20 [s] Usuario digita Esc e aperta Enter
+20 17 [e] system cancela a consulta
+9 7 [e] system indica quantidade inv·lida de trajetos
+10 21 [s] Usuario digita Esc e aperta Enter
+21 17 [e] system cancela a consulta
+10 22 [s] Usuario digita N (n„o excluir linha) e aperta Enter
+22 17 [e] system apresenta a lista de trajetos de acordo com a quantidade de trajetos e opÁıes definidas, alÈm do menu inicial do sistema
+11 9 [e] system indica opÁ„o inv·lida para opÁ„o de exclus„o de linha
+12 23 [s] Usuario digita Esc e aperta Enter
+23 17 [e] system cancela a consulta
+13 11 [e] system indica linha inv·lida
+13 11 [e] system exibe mensagem alertando que a estaÁ„o de origem faz parte da linha a ser excluÌda e n„o a exclui
+13 11 [e] system exibe mensagem alertando que a estaÁ„o de destino faz parte da linha a ser excluÌda e n„o a exclui

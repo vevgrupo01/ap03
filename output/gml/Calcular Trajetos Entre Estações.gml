@@ -105,11 +105,21 @@ node
   id 21
   label "21"
 ]
+node
+[
+  id 22
+  label "22"
+]
+node
+[
+  id 23
+  label "23"
+]
 edge
 [
   source 1
   target 2
-  label "[c] O sistema est√° operacional, exibindo o menu principal"
+  label "[c] O sistema est· operacional e exibindo o menu principal"
 ]
 edge
 [
@@ -121,25 +131,25 @@ edge
 [
   source 3
   target 4
-  label "[e] system apresenta prompt para inserir Esta√ß√£o de Origem"
+  label "[e] system apresenta prompt para inserir EstaÁ„o de Origem"
 ]
 edge
 [
   source 4
   target 5
-  label "[s] Usuario digita o nome da Esta√ß√£o de Origem e aperta Enter"
+  label "[s] Usuario digita o nome da EstaÁ„o de Origem e aperta Enter"
 ]
 edge
 [
   source 5
   target 6
-  label "[e] system apresenta prompt para inserir Esta√ß√£o de Destino"
+  label "[e] system apresenta prompt para inserir EstaÁ„o de Destino"
 ]
 edge
 [
   source 6
   target 7
-  label "[s] Usuario digita o nome da Esta√ß√£o de Destino e aperta Enter"
+  label "[s] Usuario digita o nome da EstaÁ„o de Destino e aperta Enter"
 ]
 edge
 [
@@ -157,150 +167,168 @@ edge
 [
   source 9
   target 10
-  label "[e] system apresenta prompt para opera√ß√£o de exclus√£o de linha"
+  label "[e] system apresenta prompt para opÁ„o de exclus„o de linha"
 ]
 edge
 [
   source 10
   target 11
-  label "[s] Usuario digita N (n√£o excluir linha) e aperta Enter"
+  label "[s] Usuario digita S (excluir linha) e aperta Enter"
 ]
 edge
 [
   source 11
   target 12
-  label "[e] system apresenta a quantidade de trajetos selecionada e o menu principal"
+  label "[e] system apresenta prompt para indicar a linha para exclus„o"
 ]
 edge
 [
   source 12
   target 13
-  label "[c] O sistema est√° dispon√≠vel para nova requisi√ß√£o"
+  label "[s] Usuario digita o nome da linha para exclus„o e aperta Enter"
 ]
 edge
 [
-  source 2
+  source 13
   target 14
-  label "[s] Usuario aperta ESC para cancelamento"
+  label "[e] system remove a linha desejada"
 ]
 edge
 [
   source 14
-  target 13
-  label "[e] system apresenta menu principal"
-]
-edge
-[
-  source 3
-  target 2
-  label "[e] system indica op√ß√£o desconhecida"
-]
-edge
-[
-  source 4
   target 15
-  label "[s] Usuario aperta ESC para cancelamento"
+  label "[s] Usuario aguarda o processamento dos trajetos"
 ]
 edge
 [
   source 15
-  target 13
-  label "[e] system apresenta menu principal"
+  target 16
+  label "[e] system apresenta  a lista de trajetos de acordo com a quantidade de trajetos e opÁıes definidas, alÈm do menu inicial do sistema"
+]
+edge
+[
+  source 16
+  target 17
+  label "[c] O sistema est· disponÌvel para uma nova consulta"
+]
+edge
+[
+  source 4
+  target 18
+  label "[s] Usuario digita Esc e aperta Enter"
+]
+edge
+[
+  source 18
+  target 17
+  label "[e] system cancela a consulta"
 ]
 edge
 [
   source 5
   target 3
-  label "[e] system indica esta√ß√£o desconhecida"
+  label "[e] system exibe mensagem de estaÁ„o de origem inexistente ou inv·lida"
 ]
 edge
 [
   source 6
-  target 16
-  label "[s] Usuario aperta ESC para cancelamento"
+  target 19
+  label "[s] Usuario digita Esc e aperta Enter"
 ]
 edge
 [
-  source 16
-  target 13
-  label "[e] system apresenta menu principal"
+  source 19
+  target 17
+  label "[e] system cancela a consulta"
 ]
 edge
 [
   source 7
   target 5
-  label "[e] system indica esta√ß√£o desconhecida"
+  label "[e] system exibe mensagem de estaÁ„o de destino inexistente ou inv·lida"
+]
+edge
+[
+  source 7
+  target 5
+  label "[e] system exibe mensagem alertando que a estaÁ„o de origem e de destino possuem o mesmo nome"
 ]
 edge
 [
   source 8
-  target 17
-  label "[s] Usuario aperta ESC para cancelamento"
+  target 20
+  label "[s] Usuario digita Esc e aperta Enter"
 ]
 edge
 [
-  source 17
-  target 13
-  label "[e] system apresenta menu principal"
+  source 20
+  target 17
+  label "[e] system cancela a consulta"
 ]
 edge
 [
   source 9
   target 7
-  label "[e] system indica quantidade inv√°lida de trajetos"
+  label "[e] system indica quantidade inv·lida de trajetos"
 ]
 edge
 [
   source 10
-  target 18
-  label "[s] Usuario aperta ESC para cancelamento"
-]
-edge
-[
-  source 18
-  target 13
-  label "[e] system apresenta menu principal"
-]
-edge
-[
-  source 10
-  target 19
-  label "[s] Usuario usu√°rio digita Y e aperta Enter"
-]
-edge
-[
-  source 19
-  target 20
-  label "[e] system apresenta prompt para selecionar linha para exclus√£o"
-]
-edge
-[
-  source 20
   target 21
-  label "[s] Usuario usu√°rio digita nome da linha para exclus√£o e aperta Enter"
+  label "[s] Usuario digita Esc e aperta Enter"
 ]
 edge
 [
   source 21
-  target 13
-  label "[e] system remove linha digitada dos trajetos calculados, apresenta trajetos e menu principal"
+  target 17
+  label "[e] system cancela a consulta"
+]
+edge
+[
+  source 10
+  target 22
+  label "[s] Usuario digita N (n„o excluir linha) e aperta Enter"
+]
+edge
+[
+  source 22
+  target 17
+  label "[e] system apresenta a lista de trajetos de acordo com a quantidade de trajetos e opÁıes definidas, alÈm do menu inicial do sistema"
 ]
 edge
 [
   source 11
-  target 10
-  label "[e] system indica opera√ß√£o n√£o reconhecida"
+  target 9
+  label "[e] system indica opÁ„o inv·lida para opÁ„o de exclus„o de linha"
 ]
 edge
 [
-  source 19
-  target 13
-  label "[e] system indica opera√ß√£o n√£o reconhecida"
+  source 12
+  target 23
+  label "[s] Usuario digita Esc e aperta Enter"
 ]
 edge
 [
-  source 21
-  target 13
-  label "[e] system indica linha reconhecida"
+  source 23
+  target 17
+  label "[e] system cancela a consulta"
+]
+edge
+[
+  source 13
+  target 11
+  label "[e] system indica linha inv·lida"
+]
+edge
+[
+  source 13
+  target 11
+  label "[e] system exibe mensagem alertando que a estaÁ„o de origem faz parte da linha a ser excluÌda e n„o a exclui"
+]
+edge
+[
+  source 13
+  target 11
+  label "[e] system exibe mensagem alertando que a estaÁ„o de destino faz parte da linha a ser excluÌda e n„o a exclui"
 ]
 ]

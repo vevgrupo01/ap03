@@ -1,67 +1,78 @@
 systemName "metro_de_londres"
 
-// Explicitando tamanho do relatÃ³rio de casos de testes
+// Explicitando tamanho do relatório de casos de testes
 maxTestCaseSize 1
 
-usecase "Calcular Trajetos Entre EstaÃ§Ãµes" {
-	version "0.1" type "set_type" user "set_user" date "04/10/20"
+usecase "Calcular Trajetos Entre Estações" {
+	version "0.2" type "set_type" user "set_user" date "12/10/20"
 	actor usuario "Usuario"
 	
-	preCondition "O sistema estÃ¡ operacional, exibindo o menu principal"
+	preCondition "O sistema está operacional e exibindo o menu principal"
 	
 	basic {
-		step 1  usuario "digita 1 e aperta Enter" af [1] 
-		step 2 system "apresenta prompt para inserir EstaÃ§Ã£o de Origem" ef[1]
-		 
-		step 3 usuario "digita o nome da EstaÃ§Ã£o de Origem e aperta Enter" af [1]
-		step 4 system "apresenta prompt para inserir EstaÃ§Ã£o de Destino" ef[2]
+		step 1 usuario "digita 1 e aperta Enter" 
 		
-		step 5 usuario "digita o nome da EstaÃ§Ã£o de Destino e aperta Enter" af [1]
-		step 6 system "apresenta prompt para selecionar a quantidade de trajetos" ef[3]
+		step 2 system "apresenta prompt para inserir Estação de Origem" 
+		step 3 usuario "digita o nome da Estação de Origem e aperta Enter" af[1]
 		
-		step 7 usuario "digita a quantidade de trajetos e aperta Enter" af [1]
-		step 8 system "apresenta prompt para operaÃ§Ã£o de exclusÃ£o de linha" ef[4]
+		step 4 system "apresenta prompt para inserir Estação de Destino" ef[1]
+		step 5 usuario "digita o nome da Estação de Destino e aperta Enter" af[1]
 		
-		step 9 usuario "digita N (nÃ£o excluir linha) e aperta Enter" af [1,2]
-		step 10 system "apresenta a quantidade de trajetos selecionada e o menu principal" ef[6]
+		step 6 system "apresenta prompt para selecionar a quantidade de trajetos" ef[2,3]
+		step 7 usuario "digita a quantidade de trajetos e aperta Enter" af[1]
+		
+		step 8 system "apresenta prompt para opção de exclusão de linha" ef[4]
+		step 9 usuario "digita S (excluir linha) e aperta Enter" af[1,2]
+		step 10 system "apresenta prompt para indicar a linha para exclusão" ef[5]
+		step 11 usuario "digita o nome da linha para exclusão e aperta Enter" af[1]
+		step 12 system "remove a linha desejada" ef[6,7,8]
+		
+		step 13 usuario "aguarda o processamento dos trajetos" // sta
+		step 14 system "apresenta  a lista de trajetos de acordo com a quantidade de trajetos e opções definidas, além do menu inicial do sistema"
 	}
 	
-	alternative 1 "Cancelar OperaÃ§Ã£o" {
-		step 1 usuario "aperta ESC para cancelamento"
-		step 2 system "apresenta menu principal"
+
+	alternative 1 "Usuário cancela a consulta" {
+		step 1 usuario "digita Esc e aperta Enter"
+		step 2 system "cancela a consulta" 
 	}
 	
-	alternative 2 "Excluir Linha" {
-		step 1 usuario "usuÃ¡rio digita Y e aperta Enter"
-		step 2 system "apresenta prompt para selecionar linha para exclusÃ£o" ef[6]
-		step 3 usuario "usuÃ¡rio digita nome da linha para exclusÃ£o e aperta Enter" 
-		step 4 system "remove linha digitada dos trajetos calculados, apresenta trajetos e menu principal" ef[5] 
+	alternative 2 "Não excluir linha" {
+		step 1 usuario "digita N (não excluir linha) e aperta Enter"// af[1] CLARET aparentemente nao deixa referenciar um af a partir de outro af
+		step 2 system "apresenta a lista de trajetos de acordo com a quantidade de trajetos e opções definidas, além do menu inicial do sistema" // sta
 	}
 	
-	
-	exception 1 "OpÃ§Ã£o nÃ£o reconhecida no Menu"{
-		step 1 system "indica opÃ§Ã£o desconhecida" bs 1 
+	exception 1 "Estação de Origem inexistente ou inválida " {
+		step 1 system "exibe mensagem de estação de origem inexistente ou inválida" bs 2 
 	}
 	
-	exception 2 "EstaÃ§Ã£o de Origem nÃ£o existe"{
-		step 1 system "indica estaÃ§Ã£o desconhecida" bs 2 
+	exception 2 "Estação de Destino inexistente ou inválida" {
+		step 1 system "exibe mensagem de estação de destino inexistente ou inválida" bs 4 
 	}
 	
-	exception 3 "EstaÃ§Ã£o de Destino nÃ£o existe"{
-		step 1 system "indica estaÃ§Ã£o desconhecida" bs 4 
+	exception 3 "Estação de Origem e Destino com o mesmo nome" {
+		step 1 system "exibe mensagem alertando que a estação de origem e de destino possuem o mesmo nome" bs 4 
 	}
 	
-	exception 4 "Quantidade de trajetos invÃ¡lida"{
-		step 1 system "indica quantidade invÃ¡lida de trajetos" bs 6 
+	exception 4 "Quantidade de trajetos inválida" {
+		step 1 system "indica quantidade inválida de trajetos" bs 6 
 	}
-	
-	exception 5 "Linha nÃ£o reconhecida"{
-		step 1 system "indica linha reconhecida" bs 8
-	}
-	
-	exception 6 "OpÃ§Ã£o de operaÃ§Ã£o de linha nÃ£o reconhecida"{
-		step 1 system "indica operaÃ§Ã£o nÃ£o reconhecida" bs 9
+
+	exception 5 "Opção inválida para opção de exclusão de linha" {
+		step 1 system "indica opção inválida para opção de exclusão de linha" bs 8
 	}
 		
-	postCondition "O sistema estÃ¡ disponÃ­vel para nova requisiÃ§Ã£o"
+	exception 6 "Linha inválida" {
+		step 1 system "indica linha inválida" bs 10
+	}
+	
+	exception 7 "Linha cuja estação de origem faz parte" {
+		step 1 system "exibe mensagem alertando que a estação de origem faz parte da linha a ser excluída e não a exclui" bs 10
+	}
+	
+	exception 8 "Linha cuja estação de destino faz parte" {
+		step 1 system "exibe mensagem alertando que a estação de destino faz parte da linha a ser excluída e não a exclui" bs 10
+	}
+		
+	postCondition "O sistema está disponível para uma nova consulta"
 }
